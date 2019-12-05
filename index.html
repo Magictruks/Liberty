@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Liberty Axel</title>
+</head>
+<body id="top">
+    <header>
+        <!-- Barre de Navigation -->
+        <nav>
+            <a href="#top" id="logo">LIBERTY</a>
+            <ul>
+                <li><a href="#top">HOME</a></li>
+                <li><a href="#our_works">OUR WORKS</a></li>
+                <li><a href="#princing">PRICING</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- Banniere -->
+        <div id="banniere">
+            <img src="img/logo.png" alt="logo-liberty"/>
+            <h1><span>HELLO WE ARE LIBERTY</span>
+            <span>WE DO AMAZING THINGS EVERYDAY</span></h1>
+            <a href="#contact" id="button_banniere">CONTACT US</a>
+        </div>
+    </header>
+    <main>
+        <!-- Première section -->
+        <section id="our_works">
+            <h2>OUR WORKS</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit at numquam illo laudantium, repellendus modi consequuntur.</p>
+            <div id="row_image">
+                <div class="zoom"><img src="./img/img-0.jpg" alt="img0"></div>
+                <div class="zoom"><img src="./img/img-1.jpg" alt="img1"></div>
+                <div class="zoom"><img src="./img/img-2.jpg" alt="img2"></div>
+                <div class="zoom"><img src="./img/img-3.jpg" alt="img3"></div>
+                <div class="zoom"><img src="./img/img-4.jpg" alt="img4"></div>
+                <div class="zoom"><img src="./img/img-5.jpg" alt="img5"></div>
+                <div class="zoom"><img src="./img/img-6.jpg" alt="img6"></div>
+                <div class="zoom"><img src="./img/img-7.jpg" alt="img7"></div>
+                
+            </div>
+        </section>
+        <!-- Deuxième section -->
+        <section id="princing">
+            <h2>PRICING TABLE</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit at numquam illo laudantium, repellendus modi consequuntur.</p>
+            <div id="tableau">
+                <ul>
+                    <li>Bronze</li>
+                    <li>5$ / month</li>
+                    <li>1 Account</li>
+                    <li>1 Project</li>
+                    <li>50K API Access</li>
+                    <li>50MB Storage</li>
+                    <li>Custom Cloud Services</li>
+                    <li>Weekly Reports</li>
+                    <li><button>SIGN UP NOW</button></li>
+                </ul>
+                <ul>
+                    <li>Silver</li>
+                    <li>10$ / month</li>
+                    <li>1 Account</li>
+                    <li>3 Project</li>
+                    <li>100 API Access</li>
+                    <li>100MB Storage</li>
+                    <li>Custom Cloud Services</li>
+                    <li>Weekly Reports</li>
+                    <li><button>SIGN UP NOW</button></li>
+                </ul>
+                <ul>
+                    <li>Gold</li>
+                    <li>20$ / month</li>
+                    <li>2 Account</li>
+                    <li>5 Project</li>
+                    <li>100K API Access</li>
+                    <li>200MB Storage</li>
+                    <li>Custom Cloud Services</li>
+                    <li>Weekly Reports</li>
+                    <li><button>SIGN UP NOW</button></li>
+                </ul>
+                <ul>
+                    <li>Diamond</li>
+                    <li>35$ / month</li>
+                    <li>5 Account</li>
+                    <li>20 Project</li>
+                    <li>300K API Access</li>
+                    <li>500MB Storage</li>
+                    <li>Custom Cloud Services</li>
+                    <li>Weekly Reports</li>
+                    <li><button>SIGN UP NOW</button></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Troisième section -->
+        <section id="contact">
+            <h2>CONTACT US</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit at numquam illo laudantium, repellendus modi consequuntur.</p>
+            <form method="get" id="formContact">
+                <textarea name="message" placeholder="Message" id="message" cols="30" rows="10"></textarea>
+                <div id="contactBloc2">
+                    <input type="text" name="name" id="name" placeholder="Name"/>
+                    <input type="text" name="email" id="email" placeholder="Email"/>
+                    <div id="contactBloc3">
+                        <select name="service" id="service">
+                            <option value="">Services</option>
+                            <option value="option 1">Option 1</option>
+                            <option value="option 2">Option 2</option>
+                            <option value="option 3">Option 3</option>
+                            <option value="option 4">Option 4</option>
+                        </select>
+                        <input type="submit" value="SEND" id="submit">
+                    </div>
+                </div>
+            </form>
+            <a href="#top"><img src="./img/fleche.png" alt="fleche" id="fleche"></a>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright @ 2014 Compagny, Inc. All right reserved</p>
+        <p>Theme Liberty 1.0.0 Designed by Mwa</p>
+        <div id="icon">
+            <img src="./img/facebook.png" alt="facebook"/>
+            <img src="./img/twitter.png" alt="twitter"/>
+            <img src="./img/google.png" alt="google"/>
+        </div>
+    </footer>
+    <!-- Script en Jquery qui permet de faire un défilement de page fluide, ce n'est pas de moi -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('a[href*=#]').on('click', function() { // Au clic sur un élément
+                var page = $(this).attr('href'); // Page cible
+                var speed = 500; // Durée de l'animation (en ms)
+                $('html, body').animate({
+                    scrollTop: $(page).offset().top
+                }, speed, 'swing'); // Go
+                return false;
+            });
+            $('button[href*=#]').on('click', function() { // Au clic sur un élément
+                var page = $(this).attr('href'); // Page cible
+                var speed = 500; // Durée de l'animation (en ms)
+                $('html, body').animate({
+                    scrollTop: $(page).offset().top
+                }, speed, 'swing'); // Go
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

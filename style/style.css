@@ -1,0 +1,383 @@
+/* Insertion de la police */
+@font-face {
+    font-family: 'poiret_oneregular';
+    src: url('poiretone-regular-webfont.woff2') format('woff2'),
+         url('poiretone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+    margin:0;
+    padding: 0;
+    font-family: poiret_oneregular;
+    color: white;
+    background: url(../img/hero.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* -----------------Barre de Navigation----------------- */
+
+nav{
+    position: fixed;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #E74C3C 0% 0% no-repeat padding-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    left: -10px;
+    right: -10px;
+    z-index: 1000;
+}
+
+nav > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav > ul > li{
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 0.8s;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: white;
+    padding-bottom: 4px;
+}
+
+nav > ul > li > a:hover{
+    border-bottom: 1px solid white;
+}
+
+#logo{
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+
+}
+
+/* -----------------Banniere----------------- */
+
+#banniere{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px;
+}
+
+h1{
+    text-align: center;
+    font-size: 4.5vw;
+    font-weight: normal;
+}
+
+#button_banniere{
+    color: white;
+    padding: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #E74C3C;
+    border-radius: 20px;
+    border: none;
+    text-decoration: none;
+    transition-property: background-color;
+    transition-duration: 0.6s;
+    outline: none;
+}
+
+#button_banniere:hover{
+    background-color: rgb(189, 67, 53);
+}
+
+
+
+/* -----------------Main----------------- */
+
+main{
+    background-color: white;
+    padding-top: 10px;
+}
+
+section{
+    color: black;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    font-size: 3.5vw;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+p{
+    text-align: center;
+    width: 50%;
+    color: grey;
+    margin-bottom: 50px;
+}
+
+/* -----------------Ours Works----------------- */
+
+#row_image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    overflow: hidden;
+}
+
+#row_image img{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%;
+    width: 270px;
+    height: 203px;
+    transition: all 0.8s;
+    max-width: 100%;
+}
+.zoom{
+    overflow: hidden;
+    transition: all 0.8s;
+    max-width: 100%;
+    margin-left: 1%;
+    filter: grayscale(100%);
+}
+
+.zoom:hover{
+    filter: grayscale(0%);
+}
+
+.zoom img:hover {
+    transform: scale(1.06);
+}
+
+.zoom img:hover .zoom {
+    background-color: black;
+}
+
+/* -----------------Pricing Table----------------- */
+
+#tableau{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#tableau > ul{
+    text-align: center;
+    margin: 20px;
+    padding: 0;
+    border-collapse: collapse;
+    border: 1px solid grey;
+    width: 268px;
+    list-style-type: none;    
+}
+
+#tableau > ul > li:nth-child(1), 
+#tableau > ul > li:nth-child(2){
+    background-color: #ebebeb;
+    transition-property: background-color;
+    transition-duration: 0.6s;
+}
+
+#tableau > ul > li:nth-child(1){
+    font-size: 2.5vw;
+    padding-top: 20px;
+    font-weight: normal;
+    color: #575757;
+}
+
+#tableau > ul > li:nth-child(2){
+    font-size: 1vw;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+#tableau > ul > li:nth-child(3),
+#tableau > ul > li:nth-child(4), 
+#tableau > ul > li:nth-child(5),
+#tableau > ul > li:nth-child(6), 
+#tableau > ul > li:nth-child(7){
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    width: 70%;
+}
+
+#tableau > ul > li >button{
+    width: 80%;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #2c3e50;
+    transition-property: background-color;
+    transition-duration: 0.6s;
+}
+
+/* ----------------Effet tableau-------------- */
+
+#tableau > ul:hover{
+    border: 1px solid #3498dbc4;
+}
+
+#tableau > ul:hover li:nth-child(1),
+#tableau > ul:hover li:nth-child(2){
+    background-color: #3498dbc4;
+    color: white;
+}
+
+#tableau > ul:hover > li > button{
+    background-color: #3498dbc4;
+}
+
+/* -----------------Contact----------------- */
+
+#contact{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+#contact > p{
+    color: white;
+}
+
+#formContact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 1000px;
+    margin-right: 1000px;
+    width: 100%;
+}
+
+#contactBloc2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+#contactBloc3{
+    display: flex;
+    justify-content: space-between;
+}
+
+#service{
+    width: 80%;
+}
+
+#submit{
+    width: 15%;
+    color: white;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #E74C3C;
+    border-radius: 5px;
+    border: 0;
+    transition-property: background-color;
+    transition-duration: 1s;
+    outline: none;
+}
+
+#submit:hover{
+    background-color: rgb(189, 67, 53);
+}
+
+input{
+    padding: 10px;
+    transition-property: padding;
+    transition-duration: 0.4s;
+}
+
+input:focus{
+    padding: 20px;
+}
+
+textarea{
+    margin-right: 20px;
+    width: 50%;
+    padding: 10px;
+    transition-property: padding;
+    transition-duration: 0.4s;
+}
+
+textarea:focus{
+    padding: 20px;
+}
+
+select{
+    padding: 10px;
+}
+
+#fleche{
+    border-radius: 50%;
+    padding: 15px;
+    position: relative;
+    width: 40px;
+    top: 220px;
+    transform: rotate(180deg);
+    background-color: #E74C3C;
+}
+
+/* -----------------Footer----------------- */
+
+footer{
+    background-color: white;
+    margin:0;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p{
+    margin:0;
+    padding: 20px;
+}
+
+#icon{
+    margin-left: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon > img{
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+#icon > img:hover{
+    width: 70px;
+    height: 70px;
+    transform: rotate(360deg);
+}
